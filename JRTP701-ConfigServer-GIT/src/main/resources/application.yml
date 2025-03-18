@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: JRTP701-ConfigServer-GIT
+  cloud:
+    config:
+      server:
+        bootstrap: false
+        git:
+          clone-on-start: true
+          skipSslValidation: true
+          uri: https://gitlab.com/nareshit_ameerpet/jrtp701proj.git

@@ -1,0 +1,21 @@
+server:
+  port: 4041
+spring:
+  application:
+    name: JRTP701-MiniProj02-ReportAPI
+  datasource:
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     url: jdbc:mysql:///jrtp701db
+     username: root
+     password: root
+  jpa:
+     show-sql: true
+     hibernate:
+        ddl-auto: update
+     database-platform: org.hibernate.dialect.MySQL8Dialect
+  sql: 
+    init:
+      mode: never
+     
+          
+     

@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: JRTP701-MiniProject03-UserMgmtAPI
+#for  data source
+  datasource: 
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///jrtp701db
+    username: root
+    password: root
+    
+ # jpa  -hibernate proeprties
+  jpa: 
+     show-sql: true
+     database-platform: org.hibernate.dialect.MySQL8Dialect
+     hibernate:
+          ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: gopesh.sharma@gmail.com
+    password: wxfmfmlcwjqhuhxx
+    properties:
+        mail:
+          transport:
+             protocol: smtp
+          smtp: 
+              port: 587
+              auth: true
+              starttls:
+                  enable: true
+                  required: true
+          
+server:
+   port:  4041
+
+mailbody:
+   registeruser:
+        location:  src/main/java/com/nt/service/user_registration_body.txt
+   recoverpwd:
+        location:  src/main/java/com/nt/service/recover_pwd_body.txt
+        
+        
+             
+          
+           
+       
+   

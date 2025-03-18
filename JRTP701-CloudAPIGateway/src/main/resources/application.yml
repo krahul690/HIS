@@ -1,0 +1,36 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+server:
+  port: 7777
+spring:
+  application:
+    name: JRTP701-LCloudAPIGateway
+  cloud:
+    gateway:
+      routes:
+      - id: JRTP701-AdminService
+        predicates:
+        - Path=/plan-api/**
+        uri: http://localhost:7074/
+      - id: JRTP701-ApplicationRegistrationService
+        predicates:
+        - Path=/CitizenAR-api/**
+        uri: http://localhost:7071/
+      - id: JRTP701-BIService
+        predicates:
+        - Path=/bi-api/**
+        uri: http://localhost:7076/
+      - id: JRTP701-CorrespondenceAPI
+        predicates:
+        - Path=/co-triggers-api/**
+        uri: http://localhost:7075
+      - id: JRTP701-DataCollectionService
+        predicates:
+        - Path=/dc-api/**
+        uri: http://localhost:7072/
+      - id: JRTP701-ElgibilityDeteminationService
+        predicates:
+        - Path=/ed-api/**
+        uri: http://localhost:7073/

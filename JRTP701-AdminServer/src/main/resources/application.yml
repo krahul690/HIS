@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: JRTP701-AdminServer
+server:
+   port: 9999
+   
